@@ -1,3 +1,14 @@
 /.venv
 /analysis
 /outputs
+
+# Large data files (too big for GitHub)
+/data_clean/
+*.csv
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python

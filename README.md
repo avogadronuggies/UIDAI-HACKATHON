@@ -134,19 +134,6 @@ python scripts/data_cleaning.py
 
 ## 🏃 Running the Application
 
-### Option 1: Using Start Script (Recommended - Windows)
-```bash
-cd scripts
-start-app.bat
-```
-
-This will:
-1. Start the backend API server on port 8000
-2. Start the frontend dev server on port 3000
-3. Open both in separate terminal windows
-
-### Option 2: Manual Start
-
 #### Terminal 1 - Start Backend API
 ```bash
 cd "C:\Users\hp1\OneDrive\Desktop\UIDAI HACKATHON"

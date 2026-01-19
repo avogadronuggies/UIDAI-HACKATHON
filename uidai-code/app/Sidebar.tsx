@@ -17,8 +17,12 @@ const Sidebar = ({ items, activeSection, onSelect }: Props) => {
     return (
         <aside className="flex w-72 flex-col border-r border-slate-200 bg-white/80 backdrop-blur">
             <div className="flex items-center gap-3 px-6 py-5">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-indigo-600 text-lg font-semibold text-white">
-                    AI
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl overflow-hidden">
+                    <img 
+                        src="/aadhaar-logo.png" 
+                        alt="Aadhaar Logo" 
+                        className="h-full w-full object-contain"
+                    />
                 </div>
                 <div className="space-y-0.5">
                     <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600">UIDAI Hackathon</p>

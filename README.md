@@ -1,299 +1,455 @@
-# UIDAI Aadhaar Data Cleaning - Complete Report
+# UIDAI Aadhaar Dashboard - Full Stack Application
 
-## 🎯 Problem Statement
+Interactive dashboard for analyzing Aadhaar enrollment data with geographic visualization, time series analysis, and comprehensive statistics.
 
-**Unlocking Societal Trends in Aadhaar Enrolment and Updates**
+![Dashboard Preview](https://img.shields.io/badge/Next.js-16.1.3-black?logo=next.js)
+![React](https://img.shields.io/badge/React-19.2.3-blue?logo=react)
+![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-Latest-green?logo=fastapi)
 
-Identify meaningful patterns, trends, anomalies, or predictive indicators and translate them into clear insights or solution frameworks that can support informed decision-making and system improvements.
+## 📋 Table of Contents
 
----
+- [Overview](#overview)
+- [Features](#features)
+- [Technology Stack](#technology-stack)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Running the Application](#running-the-application)
+- [Project Structure](#project-structure)
+- [API Endpoints](#api-endpoints)
+- [Troubleshooting](#troubleshooting)
 
-## ✅ Data Cleaning - COMPLETED
+## 🎯 Overview
 
-### Overview
+This full-stack application provides comprehensive visualization and analysis of Aadhaar enrollment data across Indian states. It features an interactive dashboard with real-time data updates, geographic mapping, and detailed statistics.
 
-Successfully cleaned and processed **4.3+ million records** across three datasets:
+**Live Dashboard**: [http://localhost:3000](http://localhost:3000) (when running)  
+**API Documentation**: [http://localhost:8000/docs](http://localhost:8000/docs) (when running)
 
-- **Enrollment Data**: 978,493 records (97.26% data quality)
-- **Demographic Updates**: 1,583,831 records (76.45% data quality)
-- **Biometric Updates**: 1,749,527 records (94.00% data quality)
+## ✨ Features
 
-### Data Cleaning Pipeline
+### Frontend (Next.js + React)
+- 📊 **Interactive Dashboard**: Real-time metrics and statistics
+- 🗺️ **Geographic Visualization**: Interactive Leaflet maps with state-wise data
+- 📈 **Time Series Charts**: Monthly enrollment trends using Recharts
+- 🎨 **Responsive UI**: Tailwind CSS with dark mode support
+- 🔄 **Auto-refresh**: Periodic data updates from backend
+- 📱 **Mobile Friendly**: Responsive design for all screen sizes
 
-#### 📊 Input Data
+### Backend (FastAPI + Python)
+- ⚡ **Fast API Server**: High-performance REST API with automatic documentation
+- 📊 **Data Processing**: Real-time aggregation and analysis using Pandas
+- 🔒 **CORS Enabled**: Configured for frontend integration
+- 📈 **Multiple Endpoints**: Metrics, trends, state data, demographics, and insights
+- 💾 **Data Caching**: In-memory caching for optimized performance
 
-```
-data/
-├── api_data_aadhar_enrolment/     (1,006,029 rows)
-├── api_data_aadhar_demographic/   (2,071,700 rows)
-└── api_data_aadhar_biometric/     (1,861,108 rows)
-```
+## 🛠️ Technology Stack
 
-#### 🔧 Cleaning Steps Applied
+### Frontend
+- **Framework**: Next.js 16.1.3 (React 19.2.3)
+- **Language**: TypeScript 5
+- **Styling**: Tailwind CSS 4
+- **Charts**: Recharts 3.6.0
+- **Maps**: Leaflet 1.9.4 + React-Leaflet 5.0.0
+- **Build**: Next.js App Router
 
-1. ✅ **Date Validation** - Converted and validated all dates (dd-mm-yyyy format)
-2. ✅ **State Standardization** - Validated against 37 Indian states/UTs
-3. ✅ **Pincode Validation** - Ensured 6-digit format compliance
-4. ✅ **District Standardization** - Cleaned and title-cased district names
-5. ✅ **Negative Value Removal** - Eliminated invalid negative counts
-6. ✅ **Missing Value Handling** - Removed incomplete records
-7. ✅ **Duplicate Removal** - Eliminated 586,897 duplicate records
-8. ✅ **Feature Engineering** - Added year, month, day_of_week, and total columns
+### Backend
+- **Framework**: FastAPI (Python 3.12)
+- **Data Processing**: Pandas
+- **Server**: Uvicorn ASGI server
+- **Documentation**: Auto-generated OpenAPI (Swagger)
 
-#### 📈 Data Quality Metrics
+## 📦 Prerequisites
 
-**Enrollment Data**
+Before you begin, ensure you have the following installed:
 
-- Total rows processed: 1,006,029
-- Rows after cleaning: 978,493
-- Duplicates removed: 22,924
-- Invalid states: 4,612
-- **Data quality: 97.26%** ✓
+### Required Software
+- **Node.js**: Version 18.x or higher ([Download](https://nodejs.org/))
+- **npm**: Version 9.x or higher (comes with Node.js)
+- **Python**: Version 3.12 ([Download](https://www.python.org/downloads/))
+- **pip**: Python package manager (comes with Python)
 
-**Demographic Data**
+### Verify Installation
+```bash
+# Check Node.js version
+node --version  # Should be v18.x or higher
 
-- Total rows processed: 2,071,700
-- Rows after cleaning: 1,583,831
-- Duplicates removed: 469,606
-- Invalid states: 18,263
-- **Data quality: 76.45%** ⚠️ (High duplicate rate)
+# Check npm version
+npm --version   # Should be 9.x or higher
 
-**Biometric Data**
+# Check Python version
+python --version  # Should be 3.12.x
 
-- Total rows processed: 1,861,108
-- Rows after cleaning: 1,749,527
-- Duplicates removed: 94,367
-- Invalid states: 17,214
-- **Data quality: 94.00%** ✓
-
----
-
-## 📂 Output Files
-
-### Cleaned Datasets
-
-```
-data_clean/
-├── enrolment_clean.csv       (59 MB)  - 978,493 records
-├── demographic_clean.csv     (94 MB)  - 1,583,831 records
-└── biometric_clean.csv      (105 MB)  - 1,749,527 records
-```
-
-### Reports & Documentation
-
-```
-outputs/
-├── data_cleaning_report.json      - Detailed JSON statistics
-├── data_cleaning_report.md        - Human-readable cleaning report
-└── data_profile.json              - Data schema and profiling info
+# Check pip version
+pip --version
 ```
 
-### Scripts
+## 🚀 Installation
+
+### Step 1: Clone the Repository
+```bash
+cd "C:\Users\hp1\OneDrive\Desktop\UIDAI HACKATHON"
+```
+
+### Step 2: Install Frontend Dependencies
+```bash
+cd uidai-code
+npm install
+```
+
+This will install:
+- Next.js 16.1.3
+- React 19.2.3
+- TypeScript 5
+- Tailwind CSS 4
+- Recharts 3.6.0
+- Leaflet 1.9.4
+- React-Leaflet 5.0.0
+
+### Step 3: Install Backend Dependencies
+```bash
+cd ..
+pip install fastapi uvicorn pandas python-multipart
+```
+
+Or install from requirements file if available:
+```bash
+pip install -r requirements.txt
+```
+
+### Step 4: Verify Data Files
+Ensure the cleaned data files exist in the correct location:
+```
+UIDAI HACKATHON/
+├── data_clean/
+│   ├── enrolment_clean.csv      # Required
+│   ├── demographic_clean.csv    # Required
+│   └── biometric_clean.csv      # Required
+```
+
+If data files are missing, run the data cleaning script first:
+```bash
+python scripts/data_cleaning.py
+```
+
+## 🏃 Running the Application
+
+### Option 1: Using Start Script (Recommended - Windows)
+```bash
+cd scripts
+start-app.bat
+```
+
+This will:
+1. Start the backend API server on port 8000
+2. Start the frontend dev server on port 3000
+3. Open both in separate terminal windows
+
+### Option 2: Manual Start
+
+#### Terminal 1 - Start Backend API
+```bash
+cd "C:\Users\hp1\OneDrive\Desktop\UIDAI HACKATHON"
+python -m uvicorn scripts.api_server:app --reload --host 0.0.0.0 --port 8000
+```
+
+Expected output:
+```
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process
+✓ Data loaded successfully
+```
+
+#### Terminal 2 - Start Frontend
+```bash
+cd "C:\Users\hp1\OneDrive\Desktop\UIDAI HACKATHON\uidai-code"
+npm run dev
+```
+
+Expected output:
+```
+  ▲ Next.js 16.1.3
+  - Local:        http://localhost:3000
+  - Network:      http://192.168.x.x:3000
+
+ ✓ Starting...
+ ✓ Ready in 2.5s
+```
+
+### Access the Application
+
+1. **Frontend Dashboard**: [http://localhost:3000](http://localhost:3000)
+2. **Backend API**: [http://localhost:8000](http://localhost:8000)
+3. **API Documentation**: [http://localhost:8000/docs](http://localhost:8000/docs)
+
+## 📁 Project Structure
 
 ```
-scripts/
-├── data_cleaning.py               - Main cleaning pipeline
-└── data_quality_check.py          - Quality verification script
+uidai-code/
+├── app/                          # Next.js App Router
+│   ├── page.tsx                  # Main dashboard page
+│   ├── layout.tsx                # Root layout with providers
+│   ├── globals.css               # Global styles
+│   ├── api.ts                    # API service layer
+│   ├── Dashboard.tsx             # Main dashboard component
+│   ├── Sidebar.tsx               # Navigation sidebar
+│   ├── MainContent.tsx           # Static content version
+│   ├── MainContentWithAPI.tsx    # API-connected content
+│   ├── IndiaMap.tsx              # India map component (static)
+│   └── IndiaMapLeaflet.tsx       # Interactive Leaflet map
+│
+├── public/                       # Static assets
+│
+├── node_modules/                 # NPM dependencies (auto-generated)
+├── .next/                        # Next.js build output (auto-generated)
+│
+├── package.json                  # NPM dependencies and scripts
+├── package-lock.json             # Locked dependency versions
+├── tsconfig.json                 # TypeScript configuration
+├── next.config.ts                # Next.js configuration
+├── tailwind.config.ts            # Tailwind CSS configuration
+├── postcss.config.mjs            # PostCSS configuration
+├── eslint.config.mjs             # ESLint configuration
+├── .gitignore                    # Git ignore rules
+└── README.md                     # This file
+
+../scripts/                       # Backend Python scripts
+├── api_server.py                 # FastAPI backend server
+├── data_cleaning.py              # Data cleaning pipeline
+└── start-app.bat                 # Windows startup script
 ```
 
----
+## 🔌 API Endpoints
 
-## 🔍 Key Insights from Cleaned Data
+Base URL: `http://localhost:8000`
 
-### 1. Geographic Coverage
+### Available Endpoints
 
-- **37 states/UTs** covered across India
-- **983 unique districts** represented
-- **19,813 unique pincodes** captured
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/` | API health check |
+| GET | `/metrics` | Dashboard metrics and statistics |
+| GET | `/trends` | Time series data for charts |
+| GET | `/states` | State-wise enrollment data |
+| GET | `/states/all` | All states with geographic data |
+| GET | `/demographics` | Age distribution statistics |
+| GET | `/anomalies` | Data quality issues and anomalies |
+| GET | `/insights` | AI-generated insights and recommendations |
 
-### 2. Temporal Patterns
-
-- **Date Range**: March 2025 - December 2025
-- **Most Active Month**: September (enrollment)
-- **Most Active Day**: Monday (enrollment activity)
-- **Average Daily Activity**:
-  - Demographic updates: ~384,884 per day
-  - Biometric updates: ~765,897 per day
-
-### 3. Top States by Enrollment
-
-1. **Uttar Pradesh**: 1,002,631 enrollments
-2. **Bihar**: 593,753 enrollments
-3. **Madhya Pradesh**: 487,892 enrollments
-4. **West Bengal**: 369,202 enrollments
-5. **Maharashtra**: 363,446 enrollments
-
-### 4. Age Distribution in Enrollments
-
-- **Age 0-5**: 3,468,097 (65.1%) - Majority are young children
-- **Age 5-17**: 1,689,684 (31.7%) - School-age children
-- **Age 18+**: 166,166 (3.1%) - Adults
-
-### 5. Update Activity
-
-- **Total Demographic Updates**: 36,563,988
-- **Total Biometric Updates**: 68,164,858
-- **Biometric updates 1.86x** higher than demographic updates
-
----
-
-## 📊 Data Schema
-
-### Enrollment Dataset
-
-| Column            | Type     | Description              |
-| ----------------- | -------- | ------------------------ |
-| date              | datetime | Enrollment date          |
-| state             | string   | Indian state/UT          |
-| district          | string   | District name            |
-| pincode           | string   | 6-digit pincode          |
-| age_0_5           | int      | Enrollments age 0-5      |
-| age_5_17          | int      | Enrollments age 5-17     |
-| age_18_greater    | int      | Enrollments age 18+      |
-| total_enrollments | int      | Sum of all age groups    |
-| year              | int      | Year extracted from date |
-| month             | int      | Month (1-12)             |
-| day_of_week       | string   | Day name (Monday, etc.)  |
-
-### Demographic Dataset
-
-| Column                    | Type     | Description              |
-| ------------------------- | -------- | ------------------------ |
-| date                      | datetime | Update date              |
-| state                     | string   | Indian state/UT          |
-| district                  | string   | District name            |
-| pincode                   | string   | 6-digit pincode          |
-| demo_age_5_17             | int      | Updates age 5-17         |
-| demo*age_17*              | int      | Updates age 17+          |
-| total_demographic_updates | int      | Sum of updates           |
-| year                      | int      | Year extracted from date |
-| month                     | int      | Month (1-12)             |
-| day_of_week               | string   | Day name                 |
-
-### Biometric Dataset
-
-| Column                  | Type     | Description              |
-| ----------------------- | -------- | ------------------------ |
-| date                    | datetime | Update date              |
-| state                   | string   | Indian state/UT          |
-| district                | string   | District name            |
-| pincode                 | string   | 6-digit pincode          |
-| bio_age_5_17            | int      | Updates age 5-17         |
-| bio*age_17*             | int      | Updates age 17+          |
-| total_biometric_updates | int      | Sum of updates           |
-| year                    | int      | Year extracted from date |
-| month                   | int      | Month (1-12)             |
-| day_of_week             | string   | Day name                 |
-
----
-
-## 🚀 Next Steps - Analysis & Insights
-
-Now that data is cleaned, proceed with:
-
-### Phase 1: Exploratory Data Analysis (EDA)
-
-- [ ] Time series analysis of enrollment trends
-- [ ] Geographic heatmaps and state-wise patterns
-- [ ] Age distribution analysis
-- [ ] Seasonal patterns and weekly trends
-- [ ] Correlation analysis between datasets
-
-### Phase 2: Pattern Recognition
-
-- [ ] Identify enrollment hotspots
-- [ ] Detect anomalies and outliers
-- [ ] Urban vs rural patterns (pincode analysis)
-- [ ] Peak activity times and days
-- [ ] Regional disparities
-
-### Phase 3: Predictive Modeling
-
-- [ ] Forecast enrollment trends
-- [ ] Predict update demand by region
-- [ ] Identify underserved areas
-- [ ] Resource allocation optimization
-- [ ] Anomaly detection system
-
-### Phase 4: Insights & Recommendations
-
-- [ ] Policy recommendations
-- [ ] Infrastructure planning insights
-- [ ] Service optimization strategies
-- [ ] Digital divide analysis
-- [ ] Target intervention areas
-
----
-
-## 🛠️ How to Use
-
-### Run Data Cleaning
+### Example API Calls
 
 ```bash
-python scripts/data_cleaning.py --data-dir ./data --output-dir ./data_clean
+# Get dashboard metrics
+curl http://localhost:8000/metrics
+
+# Get time series trends
+curl http://localhost:8000/trends
+
+# Get state-wise data
+curl http://localhost:8000/states
+
+# Get all states for map
+curl http://localhost:8000/states/all
 ```
 
-### Run Quality Check
+## 📊 Dashboard Features
 
-```bash
-python scripts/data_quality_check.py
-```
+### 1. Overview Section
+- Total enrollments across India
+- Demographic updates count
+- Biometric updates count
+- Data quality score (0-100)
+- Record counts by dataset
 
-### Load Cleaned Data (Python)
+### 2. Time Series Visualization
+- Monthly enrollment trends
+- Demographic update patterns
+- Biometric update patterns
+- Interactive line charts with hover details
+
+### 3. Geographic Map
+- Interactive India map with Leaflet
+- State-wise enrollment visualization
+- Click states for detailed information
+- Color-coded by enrollment intensity
+- Zoom and pan controls
+
+### 4. State Statistics
+- Top 10 states by enrollment
+- Districts covered per state
+- Quality scores by state
+- Enrollment density metrics
+
+### 5. Demographics
+- Age group distribution (0-5, 5-17, 18+)
+- Visual pie charts
+- Percentage breakdowns
+
+## 🔧 Configuration
+
+### Backend Configuration (api_server.py)
 
 ```python
-import pandas as pd
+# Change port
+uvicorn.run(app, host="0.0.0.0", port=8000)  # Modify port here
 
-# Load cleaned datasets
-enrol_df = pd.read_csv('data_clean/enrolment_clean.csv', parse_dates=['date'])
-demo_df = pd.read_csv('data_clean/demographic_clean.csv', parse_dates=['date'])
-bio_df = pd.read_csv('data_clean/biometric_clean.csv', parse_dates=['date'])
-
-print(f"Enrollment records: {len(enrol_df):,}")
-print(f"Demographic records: {len(demo_df):,}")
-print(f"Biometric records: {len(bio_df):,}")
+# CORS settings
+allow_origins=["http://localhost:3000"]  # Add your domains
 ```
 
+### Frontend Configuration (app/api.ts)
+
+```typescript
+// Change API base URL
+const API_BASE_URL = "http://localhost:8000";  // Update for production
+```
+
+### Next.js Configuration (next.config.ts)
+
+```typescript
+// Configure for production deployment
+const nextConfig = {
+  output: 'standalone',  // For Docker deployment
+  // Add your custom configurations
+};
+```
+
+## 🐛 Troubleshooting
+
+### Common Issues and Solutions
+
+#### 1. Backend Not Starting
+**Problem**: `ModuleNotFoundError: No module named 'fastapi'`  
+**Solution**:
+```bash
+pip install fastapi uvicorn pandas
+```
+
+#### 2. Data Files Not Found
+**Problem**: `FileNotFoundError: data_clean/enrolment_clean.csv`  
+**Solution**: Run data cleaning script first:
+```bash
+python scripts/data_cleaning.py
+```
+
+#### 3. Frontend Not Loading Data
+**Problem**: Map or charts show "Loading..." indefinitely  
+**Solution**:
+- Ensure backend is running on port 8000
+- Check browser console for CORS errors
+- Verify API endpoints return data:
+  ```bash
+  curl http://localhost:8000/metrics
+  ```
+
+#### 4. Port Already in Use
+**Problem**: `Error: Port 3000 is already in use`  
+**Solution**:
+```bash
+# Windows: Kill process on port
+netstat -ano | findstr :3000
+taskkill /PID <process_id> /F
+
+# Or use different port
+npm run dev -- -p 3001
+```
+
+#### 5. Module Resolution Errors
+**Problem**: TypeScript module errors  
+**Solution**:
+```bash
+# Clear cache and reinstall
+rm -rf node_modules .next
+npm install
+```
+
+#### 6. Map Not Displaying
+**Problem**: Leaflet map shows blank or errors  
+**Solution**:
+- Check browser console for CSS loading errors
+- Ensure Leaflet CSS is imported in globals.css
+- Verify API returns state data with coordinates
+
+### Debug Mode
+
+Enable verbose logging:
+
+**Backend**:
+```bash
+# Add --log-level debug
+uvicorn scripts.api_server:app --reload --log-level debug
+```
+
+**Frontend**:
+```bash
+# Check browser console (F12)
+# Look for network errors in DevTools > Network tab
+```
+
+## 📝 Development Scripts
+
+```bash
+# Frontend development
+npm run dev          # Start dev server with hot reload
+npm run build        # Build for production
+npm run start        # Start production server
+npm run lint         # Run ESLint
+
+# Backend development
+python scripts/api_server.py          # Direct Python execution
+python -m uvicorn scripts.api_server:app --reload  # With auto-reload
+```
+
+## 🚀 Production Deployment
+
+### Build Frontend
+```bash
+cd uidai-code
+npm run build
+npm run start  # Production server
+```
+
+### Run Backend in Production
+```bash
+uvicorn scripts.api_server:app --host 0.0.0.0 --port 8000 --workers 4
+```
+
+## 📈 Performance Optimization
+
+- **Backend**: Uses in-memory caching for frequently accessed data
+- **Frontend**: Next.js automatic code splitting and optimization
+- **API**: CORS configured for specific origins only
+- **Data**: Pre-processed CSV files for fast loading
+
+## 🤝 Contributing
+
+This project is part of the UIDAI Hackathon submission. For questions or improvements:
+
+1. Review the code structure
+2. Test thoroughly before changes
+3. Follow TypeScript and Python best practices
+4. Update documentation for new features
+
+## 📄 License
+
+This project is submitted for the UIDAI Hackathon 2026.
+
+## 🔗 Related Files
+
+- **Jupyter Notebook**: `../UIDAI_Hackathon_Submission.ipynb` - Complete data analysis
+- **Data Cleaning**: `../scripts/data_cleaning.py` - Data preprocessing pipeline
+- **Clean Data**: `../data_clean/` - Processed CSV files
+
+## 📞 Support
+
+For issues or questions:
+1. Check the [Troubleshooting](#troubleshooting) section
+2. Review API documentation at http://localhost:8000/docs
+3. Check browser console for frontend errors
+4. Review terminal output for backend errors
+
 ---
 
-## ⚠️ Data Quality Notes
+**Built with ❤️ for UIDAI Hackathon 2026**
 
-1. **High Duplicate Rate in Demographic Data**: 469,606 duplicates removed (22.7% of original)
-   - May indicate repeated update requests
-   - Could be legitimate if people update multiple times
-   - Warrants further investigation
-
-2. **Invalid State Names**: ~40,089 records removed across datasets
-   - Likely data entry errors or corrupted records
-   - Names didn't match official state list
-
-3. **Age Distribution Skew**: 65% enrollments are children aged 0-5
-   - Reflects new births and delayed enrollments
-   - Important for policy planning
-
-4. **Update Volume**: Biometric updates significantly higher than demographic
-   - Suggests more frequent biometric refresh requirement
-   - Could indicate quality/authentication needs
-
----
-
-## 📞 Support & Documentation
-
-- **Data Cleaning Report**: `outputs/data_cleaning_report.md`
-- **Technical Details**: `outputs/data_cleaning_report.json`
-- **Data Profile**: `outputs/data_profile.json`
-
----
-
-## ✅ Status
-
-- [x] Data Cleaning - **COMPLETED**
-- [ ] Exploratory Data Analysis - **PENDING**
-- [ ] Pattern Recognition - **PENDING**
-- [ ] Predictive Modeling - **PENDING**
-- [ ] Final Report & Recommendations - **PENDING**
-
----
-
-**Last Updated**: January 17, 2026  
-**Status**: Data cleaning phase completed successfully ✓
+Last Updated: January 19, 2026

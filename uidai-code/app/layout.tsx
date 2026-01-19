@@ -13,9 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "UIDAI Web App",
+  title: "UIDAI Aadhaar Dashboard",
   description:
     "An app for Identifying meaningful patterns, trends, anomalies, or predictive indicators and translate them into clear insights or solution frameworks that can support informed decision-making and system improvements.",
+  icons: {
+    icon: '/aadhaar-logo.png',
+    apple: '/aadhaar-logo.png',
+  },
 };
 
 export default function RootLayout({

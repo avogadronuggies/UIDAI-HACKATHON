@@ -1,0 +1,715 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Andhra Pradesh",
+        "code": "AP",
+        "capital": "Amaravati"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [80.1, 13.6],
+            [80.5, 14.2],
+            [83.2, 14.0],
+            [84.7, 16.5],
+            [84.4, 18.8],
+            [82.5, 19.2],
+            [80.8, 18.3],
+            [79.8, 15.5],
+            [80.1, 13.6]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Arunachal Pradesh",
+        "code": "AR",
+        "capital": "Itanagar"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [91.6, 26.8],
+            [92.0, 27.5],
+            [93.5, 28.2],
+            [95.5, 28.5],
+            [97.4, 28.2],
+            [97.2, 27.0],
+            [96.5, 26.0],
+            [94.5, 26.5],
+            [92.8, 26.3],
+            [91.6, 26.8]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Assam", "code": "AS", "capital": "Dispur" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [89.7, 24.2],
+            [90.5, 25.0],
+            [91.9, 25.8],
+            [94.1, 26.8],
+            [95.9, 26.5],
+            [95.7, 25.2],
+            [92.6, 24.6],
+            [91.0, 24.0],
+            [89.7, 24.2]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Bihar", "code": "BR", "capital": "Patna" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [83.3, 24.3],
+            [84.5, 24.2],
+            [86.5, 25.0],
+            [87.9, 26.2],
+            [88.2, 27.1],
+            [86.8, 27.4],
+            [85.2, 26.8],
+            [84.0, 26.0],
+            [83.3, 24.8],
+            [83.3, 24.3]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chhattisgarh",
+        "code": "CG",
+        "capital": "Raipur"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [80.2, 17.8],
+            [81.5, 18.5],
+            [83.5, 19.0],
+            [84.0, 21.5],
+            [83.5, 23.1],
+            [81.8, 23.8],
+            [80.5, 22.5],
+            [80.0, 20.0],
+            [80.2, 17.8]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Goa", "code": "GA", "capital": "Panaji" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [73.7, 14.9],
+            [74.0, 15.0],
+            [74.3, 15.4],
+            [74.2, 15.7],
+            [73.9, 15.6],
+            [73.7, 15.3],
+            [73.7, 14.9]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gujarat",
+        "code": "GJ",
+        "capital": "Gandhinagar"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [68.2, 20.1],
+            [69.0, 22.5],
+            [70.5, 23.0],
+            [71.5, 24.0],
+            [72.5, 24.5],
+            [74.0, 23.5],
+            [74.5, 22.0],
+            [72.8, 20.7],
+            [72.0, 21.5],
+            [70.5, 21.2],
+            [69.0, 20.5],
+            [68.2, 20.1]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Haryana",
+        "code": "HR",
+        "capital": "Chandigarh"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [74.5, 27.7],
+            [75.5, 28.5],
+            [77.0, 28.9],
+            [77.6, 29.5],
+            [77.5, 30.4],
+            [76.5, 30.6],
+            [75.0, 30.0],
+            [74.5, 29.0],
+            [74.5, 27.7]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Himachal Pradesh",
+        "code": "HP",
+        "capital": "Shimla"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [75.6, 30.4],
+            [76.5, 31.0],
+            [77.5, 31.5],
+            [78.7, 32.5],
+            [79.0, 33.0],
+            [78.0, 33.5],
+            [76.5, 32.8],
+            [75.8, 31.8],
+            [75.6, 30.4]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Jharkhand", "code": "JH", "capital": "Ranchi" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [83.3, 21.9],
+            [84.5, 22.2],
+            [85.8, 23.0],
+            [87.0, 24.0],
+            [87.5, 24.8],
+            [86.0, 24.8],
+            [85.0, 24.0],
+            [84.0, 23.0],
+            [83.3, 22.5],
+            [83.3, 21.9]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Karnataka",
+        "code": "KA",
+        "capital": "Bengaluru"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [74.0, 11.6],
+            [75.5, 12.5],
+            [76.5, 13.5],
+            [77.5, 14.5],
+            [78.5, 16.0],
+            [77.5, 17.5],
+            [76.0, 18.0],
+            [75.0, 17.0],
+            [74.5, 15.5],
+            [74.0, 13.5],
+            [74.0, 11.6]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kerala",
+        "code": "KL",
+        "capital": "Thiruvananthapuram"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [74.8, 8.3],
+            [75.5, 9.0],
+            [76.5, 10.0],
+            [77.0, 11.0],
+            [77.3, 12.5],
+            [76.5, 12.8],
+            [75.8, 12.0],
+            [75.2, 11.0],
+            [75.0, 10.0],
+            [74.8, 8.3]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Madhya Pradesh",
+        "code": "MP",
+        "capital": "Bhopal"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [74.0, 21.1],
+            [76.0, 21.5],
+            [78.0, 22.5],
+            [80.5, 23.5],
+            [82.5, 24.5],
+            [82.0, 26.0],
+            [80.0, 26.5],
+            [78.0, 25.5],
+            [76.0, 24.5],
+            [74.5, 23.0],
+            [74.0, 21.1]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Maharashtra",
+        "code": "MH",
+        "capital": "Mumbai"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [72.6, 15.6],
+            [73.5, 16.5],
+            [74.5, 17.5],
+            [76.0, 18.5],
+            [78.0, 19.5],
+            [80.0, 20.5],
+            [80.5, 21.5],
+            [78.5, 21.8],
+            [76.0, 20.5],
+            [74.5, 19.5],
+            [73.0, 18.5],
+            [72.6, 16.5],
+            [72.6, 15.6]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Manipur", "code": "MN", "capital": "Imphal" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [93.5, 23.8],
+            [94.0, 24.2],
+            [94.5, 24.8],
+            [94.8, 25.2],
+            [94.4, 25.5],
+            [93.8, 25.2],
+            [93.5, 24.5],
+            [93.5, 23.8]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Meghalaya",
+        "code": "ML",
+        "capital": "Shillong"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [89.8, 25.0],
+            [90.5, 25.3],
+            [91.5, 25.8],
+            [92.5, 26.0],
+            [92.0, 26.5],
+            [90.8, 26.3],
+            [90.0, 25.8],
+            [89.8, 25.0]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Mizoram", "code": "MZ", "capital": "Aizawl" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [92.2, 21.9],
+            [92.8, 22.5],
+            [93.2, 23.5],
+            [93.5, 24.2],
+            [93.0, 24.5],
+            [92.5, 23.8],
+            [92.3, 22.8],
+            [92.2, 21.9]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Nagaland", "code": "NL", "capital": "Kohima" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [93.4, 25.2],
+            [94.2, 25.5],
+            [95.2, 26.0],
+            [95.5, 26.8],
+            [94.8, 27.0],
+            [94.0, 26.5],
+            [93.5, 25.8],
+            [93.4, 25.2]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Odisha",
+        "code": "OR",
+        "capital": "Bhubaneswar"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [81.5, 17.8],
+            [82.5, 18.5],
+            [84.0, 19.0],
+            [85.5, 20.0],
+            [87.0, 21.5],
+            [87.2, 22.5],
+            [85.5, 22.0],
+            [84.0, 21.0],
+            [82.5, 20.0],
+            [81.5, 19.0],
+            [81.5, 17.8]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Punjab", "code": "PB", "capital": "Chandigarh" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [74.5, 29.6],
+            [75.0, 30.5],
+            [75.8, 31.5],
+            [76.5, 32.3],
+            [76.0, 32.5],
+            [75.2, 32.0],
+            [74.7, 31.0],
+            [74.5, 30.0],
+            [74.5, 29.6]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Rajasthan", "code": "RJ", "capital": "Jaipur" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [69.5, 23.0],
+            [70.5, 24.5],
+            [71.5, 26.0],
+            [73.0, 27.5],
+            [75.0, 28.5],
+            [76.5, 29.5],
+            [78.0, 30.0],
+            [77.0, 28.5],
+            [75.5, 27.0],
+            [74.0, 25.5],
+            [72.5, 24.0],
+            [70.5, 23.5],
+            [69.5, 23.0]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Sikkim", "code": "SK", "capital": "Gangtok" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [88.0, 27.1],
+            [88.5, 27.5],
+            [88.9, 28.0],
+            [88.8, 28.1],
+            [88.4, 28.0],
+            [88.1, 27.5],
+            [88.0, 27.1]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tamil Nadu",
+        "code": "TN",
+        "capital": "Chennai"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [76.2, 8.1],
+            [77.5, 9.0],
+            [78.5, 10.0],
+            [79.8, 11.5],
+            [80.2, 13.0],
+            [80.0, 13.5],
+            [79.0, 12.5],
+            [78.0, 11.5],
+            [77.0, 10.0],
+            [76.5, 9.0],
+            [76.2, 8.1]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Telangana",
+        "code": "TG",
+        "capital": "Hyderabad"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [77.2, 15.8],
+            [78.5, 16.5],
+            [80.0, 17.5],
+            [81.3, 18.8],
+            [80.5, 19.5],
+            [79.0, 19.0],
+            [77.8, 18.0],
+            [77.3, 16.8],
+            [77.2, 15.8]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Tripura", "code": "TR", "capital": "Agartala" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [91.0, 22.9],
+            [91.5, 23.5],
+            [92.2, 24.0],
+            [92.5, 24.3],
+            [92.0, 24.5],
+            [91.5, 24.0],
+            [91.2, 23.5],
+            [91.0, 22.9]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Uttar Pradesh",
+        "code": "UP",
+        "capital": "Lucknow"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [77.1, 24.5],
+            [78.5, 25.0],
+            [80.5, 25.5],
+            [82.5, 26.5],
+            [84.0, 27.5],
+            [84.5, 29.0],
+            [83.0, 30.0],
+            [81.0, 30.5],
+            [79.0, 30.0],
+            [77.5, 29.0],
+            [77.0, 27.5],
+            [77.1, 24.5]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Uttarakhand",
+        "code": "UK",
+        "capital": "Dehradun"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [77.6, 28.8],
+            [78.5, 29.5],
+            [79.5, 30.0],
+            [80.5, 30.8],
+            [80.8, 31.2],
+            [79.8, 31.5],
+            [78.5, 31.0],
+            [77.8, 30.2],
+            [77.6, 28.8]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "West Bengal",
+        "code": "WB",
+        "capital": "Kolkata"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [85.8, 21.5],
+            [86.5, 22.5],
+            [87.5, 23.5],
+            [88.5, 24.5],
+            [89.5, 26.0],
+            [89.0, 27.0],
+            [88.0, 27.5],
+            [87.0, 26.5],
+            [86.0, 25.0],
+            [85.8, 23.5],
+            [85.8, 21.5]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jammu & Kashmir",
+        "code": "JK",
+        "capital": "Srinagar/Jammu"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [73.5, 32.3],
+            [74.5, 33.0],
+            [76.0, 34.0],
+            [77.5, 35.5],
+            [79.5, 36.0],
+            [80.2, 35.5],
+            [79.0, 34.0],
+            [77.5, 33.0],
+            [75.5, 32.5],
+            [74.0, 32.0],
+            [73.5, 32.3]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Delhi", "code": "DL", "capital": "New Delhi" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [76.84, 28.41],
+            [77.05, 28.5],
+            [77.34, 28.65],
+            [77.35, 28.88],
+            [77.1, 28.88],
+            [76.84, 28.7],
+            [76.84, 28.41]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ladakh", "code": "LA", "capital": "Leh" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [75.5, 32.5],
+            [77.0, 33.5],
+            [78.5, 34.5],
+            [79.5, 35.5],
+            [80.5, 35.0],
+            [79.0, 33.5],
+            [77.5, 32.5],
+            [75.5, 32.5]
+          ]
+        ]
+      }
+    }
+  ]
+}
